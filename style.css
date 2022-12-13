@@ -1,5 +1,151 @@
-h1{
-    margin: 30%;
-    color: darkblue;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(115, 115, 115);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #000000;
+}
+
+.aboutMe::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(255, 235, 205, 0.7);
+}
+
+.aboutMe::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #041e1e;
+}
+
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: radial-gradient(rgba(255, 255, 255, 0.65), rgba(169, 167, 167, 0.89)), url(https://abrakadabra.fun/uploads/posts/2021-12/1640976798_1-abrakadabra-fun-p-fon-dlya-rezyume-2.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+header{
+    background-color: rgba(79, 75, 75, 0.65);
+    height: 65px;
+}
+
+footer{
+    background-color: rgba(79, 75, 75, 0.65);
+    height: 65px;
+}
+
+.logo{
+    margin-top: -20px;
+    margin-left: 5px;
+    width: 70px;
+    height: 80px;
+}
+
+.aboutMe-photo{
+    margin-right: 400px;
+}
+
+.aboutMe{
+    padding-right:3%;
+    margin:5% 10%;
+    width: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+    height: 500px;
+    display: flex;
+    background-color: rgba(255, 235, 205, 0.75);
+    font-size: 23px;
+}
+
+.aboutMe-text{
+
+    width:100%;
+    display:flex;
+    justify-content:flex-start;
+}
+
+.aboutMe-text p {
+    margin: 5px auto;
+}
+
+.aboutMe-text h1 {
+    text-align: center;
+    display: inline;
+}
+
+img {
+    margin-top: -2%;
+    height: 550px;
+    width: 390px;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+}
+
+pre{
+    font-family: inherit;
+    font-size: 10px;
+}
+
+footer ul{
+    display: flex;
 
 }
+ footer li {
+
+     list-style-type: none;
+     margin-top:5px;
+     margin-right: 10%;
+ }
+
+ footer li a {
+     color: #ffffff;
+ }
+
+header img {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.ds-image{
+    z-index: 1;
+    cursor: default;
+}
+
+
+
+header ul{
+    margin: 0;
+    display: flex;
+}
+
+header li{
+    margin-top: 10px;
+    list-style-type: none;
+    margin-right: 35%
+}
+
+header ul li:first-child{
+    margin-left: 70px;
+}
+header h6{
+    margin: 0;
+}
+
+.ds{
+    display: flex;
+
+}
+
+h6:hover{
+    font-size: 30px;
+    z-index: 2;
+}
+
