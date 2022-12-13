@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CV 3</title>
+        <link rel="shortcut icon" href="img/uncharted_icon_197929.ico">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="img/rs_school_js.svg" alt="logo" class="logo">
+            <ul>
+                <li>
+                    <a href="https://vk.com/donformatik">
+                        <img src="img/vk.png" alt="link vk">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/magsador">
+                        <img src="img/favicon-32x32.png" alt="link tg">
+                    </a>
+                </li>
+                <li>
+                    <div class="ds">
+                        <h6>
+                            donformatik#3585
+                        </h6>
+                        <img class="ds-image" src="img/iconfinder-discord-4661587_122459.png" alt="logo discord">
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main>
+           <div class="aboutMe">
+               <div class="aboutMe-photo">
+                   <img src="img/ava.jpg" alt="Maxim Fishbain">
+               </div>
+               <div>
+                   <div class="aboutMe-text">
+                        <ul> <li>
+                                <h1>MAXIM FISHBINE</h1>
+                                <p>aboutMe:</p>
+                            </li>
+                            <li> At the moment my goal is to master front-end development, in the future I think to become a full-stack developer, good luck to me);</li>
+                            <li> My strengths: diligence, discipline, patience, enthusiasm; </li>
+                            <li> I didn’t have any work experience yet, I did independent projects, I’m happy to receive new knowledge in order to improve my skills.</li>
+                            <li>
+                                <ul>
+                                    <li>Delphi (low level)</li>
+                                    <li>C# (low level)</li>
+                                    <li>Golang (low level)</li>
+                                    <li>Python and Django framework (middle)</li>
+                                    <li>html сss (middle)</li>
+                                    <li>JS (middle)</li>
+                                    <li>React (low)</li>
+                                </ul>
+                                <h3>My code Django (create model card pizza for sqlite):</h3>
+                                    <pre>
+                                        <code>
+from django.db import models
+from django.urls import reverse
+class Card(models.Model):
+  title = models.CharField(max_length=25, verbose_name='Название')
+  image = models.ImageField(upload_to="pizzaImage/", verbose_name='Картинка')
+  price = models.PositiveIntegerField(verbose_name='Цена')
+  modalContent = models.TextField(blank="True", verbose_name='Описание')
+  isMeat = models.PositiveIntegerField(verbose_name='Тип пиццы(0/1)')
+  popularity = models.PositiveIntegerField(verbose_name='Популярность')
+  date_create = models.CharField(max_length=10, verbose_name='Дата создания')
+  date_update = models.CharField(max_length=10, verbose_name='Дата обновления')
+
+  def __str__(self):
+    return self.title
+
+  def get_absolute_url(self):
+    return reverse('Card', kwargs={'название': self.title})
+
+  class Meta:
+    verbose_name='Карточки пицц'
+    verbose_name_plural='Карточки пицц'
+    ordering=['date_create','title']
+                                            </code>
+                                    </pre>
+                                <h3>My code JS(audio player):</h3>
+
+                                    <pre>
+                                        <code>
+const audio1 = document.querySelector('.audio1'),
+audio2 = document.querySelector('.audio2'),
+nameSong1 = document.querySelector('.nameSong1'),
+nameSong2 = document.querySelector('.nameSong2'),
+albumImage = document.getElementById('album'),
+playStop1 = document.getElementById('1'),
+playStop2 = document.getElementById('2'),
+avatar = document.querySelector('.avatarInst'),
+link = document.querySelector('.link')
+
+let stop = true
+
+function loadSong(nameSong,playStop,audio) {
+    stop = false
+    audio.play()
+    nameSong.classList.add('play')
+    albumImage.classList.add('active')
+    playStop.textContent = '❚❚'
+}
+
+function stopSong(nameSong,playStop,audio) {
+    stop = true
+    audio.pause()
+    nameSong.classList.remove('play')
+    albumImage.classList.remove('active')
+    playStop.textContent = 'ᐅ'
+}
+
+nameSong1.addEventListener('click', () =>{
+
+    stop===true?loadSong(nameSong1,playStop1,audio1):stopSong(nameSong1,playStop1,audio1)
+})
+
+nameSong2.addEventListener('click', () =>{
+
+    stop===true?loadSong(nameSong2,playStop2,audio2):stopSong(nameSong2,playStop2,audio2)
+})
+                                        </code>
+                                    </pre>
+                                <h4> Doing a project with a friend -> <a href="https://github.com/MaksimkaFishbain/dj_react_pizza.git">https://github.com/MaksimkaFishbain/dj_react_pizza.git</a></h4>
+
+                                <h4> I study to be a software engineer in college, I went to a course on the basics of js by our teacher. </h4>
+
+                                <h4> I rate myself at level A1.</h4>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+           </div> 
+        </main>
+        <footer>
+            <ul>
+                <li>My course <a href="https://rs.school/js/">RS school</a></li>
+                <li>this resume was made in 2022</li>
+                <li><a href="">My GitHub</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
